@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluesky風ツイート</title>
+  <script src="https://kit.fontawesome.com/b1e16fe80e.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    a.tweet-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .tweet-container {
+      max-width: 505px;
+      margin: 0 auto 15px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.2s;
+    }
+    .tweet-container:hover {
+      background-color: #f0f8ff;
+      cursor: pointer;
+    }
+    .tweet-header {
+      display: flex;
+      align-items: center;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background: #ddd;
+    }
+    .username {
+      font-weight: bold;
+      color: #333;
+    }
+    .handle {
+      color: #777;
+      font-size: 0.9em;
+      margin-left: 5px;
+    }
+    .tweet-content {
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+    .tweet-image {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+    .tweet-actions {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.9em;
+      color: #555;
+      align-items: center;
+    }
+    .tweet-actions i {
+      cursor: pointer;
+    }
+    .tweet-actions i:hover {
+      color: #1da1f2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tweet-container">
+    <div class="tweet-header">
+      <div class="avatar"></div>
+      <div>
+        <span class="username">ひろゆき</span>
+        <span class="handle">@hirox246.bsky.social・1日</span>
+      </div>
+    </div>
+    <div class="tweet-content">
+      
+      <a href="https://bsky.app/profile/hirox246.bsky.social/post/abc123" class="tweet-link">
+      「財務省解体デモは、やりかた間違ってる」と書いてたおいらですが、予想通り忘れられつつあり、話題に...
+      
+      <img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cdrisuzdgkor6wlzgw7ekgr/bafkreigemmwavi4irnj4mhbvdhe7sby53p5kv3j3otkbl5jozsvd2qgkb4@jpeg" alt="Googleトレンド画像" class="tweet-image" />
+      
+      </a>
+    </div>
+   
+    <div class="tweet-actions">
+      <span><i class="far fa-comment" onclick="handleReply(event, 'ひろゆき')"></i> 4</span>
+      <span><i class="fas fa-retweet" onclick="handleRepost(event, 'ひろゆき')"></i></span>
+      <span><i class="far fa-heart" onclick="handleLike(event, 'ひろゆき')"></i></span>
+      <span><i class="fas fa-ellipsis-h" onclick="handleMenu(event, 'ひろゆき')"></i></span>
+    </div>
+  </div>
+  
+  
+  <div class="tweet-container">
+    <div class="tweet-header">
+      <div class="avatar"></div>
+      <div>
+        <span class="username">ひろゆき</span>
+        <span class="handle">@hirox246.bsky.social・1日</span>
+      </div>
+    </div>
+    <div class="tweet-content">
+      
+      <a href="https://bsky.app/profile/hirox246.bsky.social/post/abc123" class="tweet-link">
+      「財務省解体デモは、やりかた間違ってる」と書いてたおいらですが、予想通り忘れられつつあり、話題に...
+      
+      <img src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:5cdrisuzdgkor6wlzgw7ekgr/bafkreigemmwavi4irnj4mhbvdhe7sby53p5kv3j3otkbl5jozsvd2qgkb4@jpeg" alt="Googleトレンド画像" class="tweet-image" />
+      
+      </a>
+    </div>
+   
+    <div class="tweet-actions">
+      <span><i class="far fa-comment" onclick="handleReply(event, 'ひろゆき')"></i> 4</span>
+      <span><i class="fas fa-retweet" onclick="handleRepost(event, 'ひろゆき')"></i></span>
+      <span><i class="far fa-heart" onclick="handleLike(event, 'ひろゆき')"></i></span>
+      <span><i class="fas fa-ellipsis-h" onclick="handleMenu(event, 'ひろゆき')"></i></span>
+    </div>
+  </div>
+
+
+<script>
+  function handleReply(event, user) {
+    event.stopPropagation();
+    alert(`返信アイコン：${user}`);
+  }
+  function handleRepost(event, user) {
+    event.stopPropagation();
+    alert(`リポストアイコン：${user}`);
+  }
+  function handleLike(event, user) {
+    event.stopPropagation();
+    alert(`いいねアイコン：${user}`);
+  }
+  function handleMenu(event, user) {
+    event.stopPropagation();
+    alert(`ケバブアイコン：${user}`);
+  }
+</script>
+
+</body>
+</html>
